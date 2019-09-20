@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top is-black has-background-black-ter" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <%= link_to "Trike World Ltd.", root_path, { class: "navbar-item is-size-3 has-text-weight-bold" } %>
 
@@ -9,7 +9,7 @@
         </a>
     </div>
 
-    <div id="navbar-options" class="navbar-menu center" style="flex-grow: 1; justify-content: center;">
+    <div id="navbar-options" class="navbar-menu is-size-5">
         <div class="navbar-end">
             <%= link_to "Home", root_path, { class: "navbar-item" } %>
             <%= link_to "About me", about_path, { class: "navbar-item" } %>
@@ -20,20 +20,14 @@
                     Galleries
                 </a>
 
-                <div class="navbar-dropdown is-right">
-                    <a class="navbar-item">
-                        Red Trike
-                    </a>
-                    <a class="navbar-item">
-                        Blue Trike
-                    </a>
-                    <a class="navbar-item">
-                        Joe's Trike
-                    </a>
+                <div class="navbar-dropdown is-right is-size-5">
+                    <%= link_to "Charles's build", galleries_charles_path, { class: "navbar-item" } %>
+                    <%= link_to "Tim's build", galleries_tim_path, { class: "navbar-item" } %>
+                    <%= link_to "Red trike", galleries_red_trike_path, { class: "navbar-item" } %>
+                    <%= link_to "Roth body", galleries_roth_body_path, { class: "navbar-item" } %>
+                    <%= link_to "Twin turbo", galleries_twin_turbo_path, { class: "navbar-item" } %>
                     <hr class="navbar-divider">
-                    <a class="navbar-item">
-                        Something else
-                    </a>
+                    <%= link_to "Miscellaneous", galleries_misc_path, { class: "navbar-item" } %>
                 </div>
             </div>
         </div>

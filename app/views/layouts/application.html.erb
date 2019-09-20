@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top has-background-black">
+<html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <title><%= full_title(yield(:title)) %></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
@@ -13,10 +14,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="has-text-light">
-    <%= render 'layouts/navbar' %>
-      <%= yield %>
+  <body class="has-navbar-fixed-top">
+    <div class="has-background-black-ter has-text-light">
+      <%= render 'layouts/navbar' %>
+        <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
