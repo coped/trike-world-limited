@@ -1,0 +1,41 @@
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <%= link_to "Trike World Ltd.", root_path, { class: "navbar-item is-size-3 has-text-weight-bold" } %>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-options">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbar-options" class="navbar-menu center" style="flex-grow: 1; justify-content: center;">
+        <div class="navbar-end">
+            <%= link_to "Home", root_path, { class: "navbar-item" } %>
+            <%= link_to "About me", about_path, { class: "navbar-item" } %>
+            <%= link_to "Contact me", contact_path, { class: "navbar-item" } %>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Galleries
+                </a>
+
+                <div class="navbar-dropdown is-right">
+                    <a class="navbar-item">
+                        Red Trike
+                    </a>
+                    <a class="navbar-item">
+                        Blue Trike
+                    </a>
+                    <a class="navbar-item">
+                        Joe's Trike
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                        Something else
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
