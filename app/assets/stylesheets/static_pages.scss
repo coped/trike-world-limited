@@ -8,4 +8,12 @@
     align-items: center;
 }
 
-.has-bg-img { background: url('/assets/20161210_144905_scaled.jpg')center center; background-size:cover; }
+.has-home-bg-img { 
+    background: url('/assets/20161210_144905_scaled.jpg') center center;
+    background-size:cover;
+}
+
+.has-about-bg-img { 
+    background: url('/assets/20170715_102550_scaled.jpg') top;
+    background-size:cover;
+}
