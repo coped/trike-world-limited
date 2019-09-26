@@ -12,11 +12,24 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="has-navbar-fixed-top">
-    <div class="has-background-black-ter has-text-light">
-      <%= render 'layouts/navbar' %>
-        <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
+  <body class="has-navbar-fixed-top has-background-black">
+    <%= render 'layouts/navbar' %>
+    <%= render 'layouts/banner' %>
+    <%= render 'layouts/flash' %>
+    <section class="section">
+      <div class="columns">
+      <div class="column is-2">
+          <%= render 'layouts/menu' %>
+      </div>
+      <div class="column is-10">
+        <div class="container">
+          <div class="notification has-background-black-ter has-text-light">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

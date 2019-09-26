@@ -9,11 +9,22 @@
 }
 
 .has-home-bg-img { 
-    background: url('/assets/20161210_144905_scaled.jpg') center center;
-    background-size:cover;
+    background: url('/assets/home_images/20161210_144905_scaled.jpg') center 40%;
+    background-size: cover;
 }
 
 .has-about-bg-img { 
-    background: url('/assets/20170715_102550_scaled.jpg') top;
-    background-size:cover;
+    background: url('/assets/about_images/20170715_102550_scaled.jpg') center 15%;
+    background-size: cover;
+}
+
+.has-contact-bg-img {
+    background: url('/assets/contact_images/20180414_131039_scaled.jpg') center 30%;
+    background-size: cover;   
+}
+
+textarea,
+.textarea {
+  min-height: inherit;
+  height: auto;
 }

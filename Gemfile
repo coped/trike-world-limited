@@ -10,7 +10,7 @@ gem 'webpacker',   '~> 4.0'
 gem 'turbolinks',  '~> 5'
 gem 'jbuilder',    '~> 2.7'
 gem 'bootsnap',    '>= 1.4.2', require: false
-gem "bulma-rails", '~> 0.7.5'
+gem 'bulma-rails', '~> 0.7.5'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

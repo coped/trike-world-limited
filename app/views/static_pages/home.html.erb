@@ -1,28 +1,41 @@
 <% provide(:title, "Home") %>
-<section class="hero is-large has-home-bg-img">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title has-text-white-ter">
-                Handmade V8 Trikes
-            </h1>
-            <h2 class="subtitle has-text-white-ter">
-                By Dennis Cope
-            </h2>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container has-text-centered is-size-3">
-        <h1>Home</h1>
+<% provide(:page, "home") %>
+
+<section id="title" class="section">
+    <div class="container has-text-centered">
+        <h1 class="title is-size-1">Home</h1>
     </div>
 </section>
 <section class="section">
     <div class="container has-text-centered">
-        <div class="columns is-8"
-            <h1 class="column is-one-third">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-            </h1>
-            <%= image_tag "/assets/20180712_111632_scaled.jpg", { class: "column is-two-thirds" } %>
+        <p class="is-size-5">        
+            You could pay $50,000.00 for a Boss Hoss or a V8 chopper trike.
+        </p>
+        <p class="is-size-5">
+            But with my help, you can build your own V8 powered trike.
+        </p>
+
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="columns is-8">
+            <div class="column">
+                <%= image_tag "/assets/home_images/004-1293-scaled.jpg" %>
+            </div>
+            <div class="column">
+                <%= image_tag "/assets/home_images/20180712_111632_scaled.jpg" %>
+            </div>
         </div>
     </div>
 </section>
+<section class="section">
+    <div class="container has-text-centered">
+        <p class="is-size-5">   
+            I have an old school Chevy chassis and a new school Ford chassis ready to go.
+        </p>
+        <p class="is-size-5">
+            Many options are available.
+        </p>
+    </div>
+</section

@@ -1,18 +1,44 @@
 <% provide(:title, "About me") %>
-<section class="hero is-large has-about-bg-img">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title has-text-white-ter">
-                About me
-            </h1>
-            <h2 class="subtitle has-text-white-ter">
-                Dennis Cope
-            </h2>
+<% provide(:page, "about") %>
+
+<section id="title" class="section">
+    <div class="container has-text-centered">
+        <h1 class="title is-size-1">About me</h1>
+    </div>
+</section>
+
+<%= render 'layouts/flash' %>
+
+<section "body-p" class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <p class="is-size-5">
+                    Hello, and thank you for visiting my site. I'm Dennis Cope and I was the co-owner of Trike
+                    World Ltd. at 6611 Compton Blvd. Paramount, California during the 70's. For those of you that
+                    were ever in our factory, you would know we were Ed "Big Daddy" Roth's original V8 trike builders 
+                    of the time. With Leon Dailey and myself, we built about 22 of the
+                    Roth designs. Many are still on the market today.
+                </p>
+            </div>
         </div>
     </div>
 </section>
+
 <section class="section">
-    <div class="container has-text-centered is-size-3">
-        <h1>About me</h1>
+    <div class="container">
+        
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <p class="is-size-5">
+            Now living in Bisbee AZ, I'm recreating a time long gone by. If you've ever dreamed about building
+            your own V8 trike, I can help you. I specialize in building rolling chassis for both new and old school
+            Chevrolets. And yes, Ford lovers, I can build a new school trike chassis just for you.
+            I can also build old school trikes like the original Ed "Big Daddy" Roth with the gas tank in the
+            rear covered by the body, as well as my new school design with the gas tank in the front.
+        </p>
     </div>
 </section>
