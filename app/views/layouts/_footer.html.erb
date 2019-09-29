@@ -1,12 +1,16 @@
 <footer id="footer" class="footer">
     <div class="content">
-        <div class="columns">
-            <p class="column has-text-centered">
-                Made using the <%= link_to "Bulma CSS framework", "https://bulma.io/" %>.
-            </p>
-            <p class="column has-text-centered">
-                Made by <%= link_to "Dennis Cope", "https://coped.dev" %>.
-            </p>
+        <div class="container">
+            <div class="columns">
+                <div class="column center">
+                    <%= link_to image_tag("/assets/misc/made-with-bulma-scaled.png"), "https://bulma.io", { class: "center", alt: "Made with Bulma" } %>
+                </div>
+                <div class="column has-text-centered">
+                    <p>
+                        Made by <%= link_to "Dennis Cope", "https://coped.dev" %>.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
