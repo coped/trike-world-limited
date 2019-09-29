@@ -3,11 +3,13 @@
         <div class="container">
             <div class="columns">
                 <div class="column center">
-                    <%= link_to image_tag("/assets/misc/made-with-bulma-scaled.png"), "https://bulma.io", { class: "center", alt: "Made with Bulma" } %>
+                    <%= link_to(
+                            image_tag("/assets/misc/made-with-bulma-scaled.png", { alt: "Made with Bulma" }),
+                        "https://bulma.io", { class: "center" }) %>
                 </div>
                 <div class="column has-text-centered">
                     <p>
-                        Made by <%= link_to "Dennis Cope", "https://coped.dev" %>.
+                        Made by <%= link_to("Dennis Cope", "https://coped.dev") %>.
                     </p>
                 </div>
             </div>
