@@ -7,7 +7,8 @@
     <title><%= full_title(yield(:title)) %></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Trike World Limited by Dennis Cope is helping people build the V8-powered trike chopper motorcycles they've always dreamed of. Contact Dennis for information today.">
+    <meta name="description" content="Trike World Limited is helping people build the V8-powered trike chopper motorcycles they've always dreamed of. Contact Dennis Cope for information today.">
+    <link rel="alternate" hreflang="en" href="https://trikeworldlimited.herokuapp.com">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -35,7 +36,6 @@
       document.querySelector(".navbar-burger").addEventListener("click", () => {
         document.querySelector(".navbar-burger").classList.toggle("is-active");
         document.querySelector(".navbar-menu").classList.toggle("is-active");
-
       });
     </script>
   </body>

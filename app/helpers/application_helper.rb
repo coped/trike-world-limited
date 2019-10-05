@@ -1,6 +1,6 @@
 module ApplicationHelper
     def full_title(title)
-        base_title = "Trike World Limited"
+        base_title = "Trike World Limited | Dennis Cope"
         if title.empty?
             base_title
         else
