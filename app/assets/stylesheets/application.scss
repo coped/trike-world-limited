@@ -13,5 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap');
+ $family-primary: 'Playfair Display', serif;
  @import "bulma";
  

@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -23,8 +27,6 @@
     background-size: cover;   
 }
 
-textarea,
-.textarea {
-  min-height: inherit;
-  height: auto;
+.paragraph {
+    margin-bottom: 2rem;
 }
