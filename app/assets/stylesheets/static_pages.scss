@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-p {
-    font-family: 'Montserrat', sans-serif;
+.cursive {
+    font-family: 'Oleo Script', cursive;
 }
 
 .center {
@@ -13,17 +13,17 @@ p {
 }
 
 .has-home-bg-img { 
-    background: url('/assets/home_images/20161210_144905_scaled.jpg') center 40%;
+    background: url('/assets/home_images/20161210_144905_scaled.jpg') center 42%;
     background-size: cover;
 }
 
 .has-about-bg-img { 
-    background: url('/assets/about_images/20170715_102550_scaled.jpg') center 15%;
+    background: url('/assets/about_images/20170715_102550_scaled.jpg') center 12%;
     background-size: cover;
 }
 
 .has-contact-bg-img {
-    background: url('/assets/contact_images/20180414_131039_scaled.jpg') center 30%;
+    background: url('/assets/contact_images/20180414_131039_scaled.jpg') center 28%;
     background-size: cover;   
 }
 
