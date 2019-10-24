@@ -17,6 +17,5 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", galleries_twin_turbo_path, count: 2
     assert_select "a[href=?]", galleries_misc_path, count: 2
     assert_select "a[href=?]", "https://coped.dev", count: 1
-    assert_select "h1", text: "Trike World Ltd."
   end
 end

@@ -8,15 +8,29 @@ class StaticPagesController < ApplicationController
     def contact
     end
 
-    def send_contact_message
-        ContactMailer.contact_message(contact_params)
-        flash[:success] = "Message successfully sent."
-        redirect_to contact_url
+    # Actions for gallery pages
+
+    def charles
+        render action: 'galleries/charles'
     end
 
-    private
+    def tim
+        render action: 'galleries/tim'
+    end
 
-        def contact_params
-            params.require(:contact).permit(:email, :phone_number, :message)
-        end
+    def red_trike
+        render action: 'galleries/red_trike'
+    end
+
+    def roth_body
+        render action: 'galleries/roth_body'
+    end
+
+    def twin_turbo
+        render action: 'galleries/twin_turbo'
+    end
+
+    def misc
+        render action: 'galleries/misc'
+    end
 end

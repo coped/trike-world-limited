@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   get  '/about',                to: 'static_pages#about'
   get  '/contact',              to: 'static_pages#contact'
 
-  get  '/galleries/charles',    to: 'galleries#charles'
-  get  '/galleries/tim',        to: 'galleries#tim'
-  get  '/galleries/red-trike',  to: 'galleries#red_trike'
-  get  '/galleries/roth-body',  to: 'galleries#roth_body'
-  get  '/galleries/twin-turbo', to: 'galleries#twin_turbo'
-  get  '/galleries/misc',       to: 'galleries#misc'
+  get  '/galleries/charles',    to: 'static_pages#charles'
+  get  '/galleries/tim',        to: 'static_pages#tim'
+  get  '/galleries/red-trike',  to: 'static_pages#red_trike'
+  get  '/galleries/roth-body',  to: 'static_pages#roth_body'
+  get  '/galleries/twin-turbo', to: 'static_pages#twin_turbo'
+  get  '/galleries/misc',       to: 'static_pages#misc'
 end
