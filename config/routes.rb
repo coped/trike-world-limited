@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get  '/galleries/roth-body',  to: 'static_pages#roth_body'
   get  '/galleries/twin-turbo', to: 'static_pages#twin_turbo'
   get  '/galleries/misc',       to: 'static_pages#misc'
+  
+  resources :users, only: [:show, :edit, :update]
+  resources :posts
+  resources :sessions, only: [:new, :create, :destroy]
 end

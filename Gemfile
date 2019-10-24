@@ -12,13 +12,13 @@ gem 'jbuilder',          '~> 2.7'
 gem 'bootsnap',          '>= 1.4.2', require: false
 gem 'bulma-rails',       '~> 0.7.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.2'
+gem 'bcrypt',            '~> 3.1', '>= 3.1.13'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
+  gem 'sqlite3', '~> 1.4', '>= 1.4.1'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -34,6 +34,10 @@ group :test do
   gem 'capybara',                 '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+end
+
+group :production do
+  gem 'pg', '~> 1.1', '>= 1.1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
