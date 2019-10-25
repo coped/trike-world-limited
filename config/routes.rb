@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   get  '/about',                to: 'static_pages#about'
   get  '/contact',              to: 'static_pages#contact'
-
   get  '/galleries/charles',    to: 'static_pages#charles'
   get  '/galleries/tim',        to: 'static_pages#tim'
   get  '/galleries/red-trike',  to: 'static_pages#red_trike'

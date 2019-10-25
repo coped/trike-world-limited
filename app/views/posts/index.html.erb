@@ -1,2 +1,8 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% provide(:title, "Blog Name") %>
+<% provide(:page, "blog") %>
+
+<section class="section">
+    <div class="container">
+        <%= link_to("Sign in", new_session_path) %>
+    </div>
+</section>
