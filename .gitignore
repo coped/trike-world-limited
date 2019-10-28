@@ -28,4 +28,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore features.todo list
-features.todo
+trike-features.todo
