@@ -1,13 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  email: MyString
-  password_digest: MyString
-  password_reset: MyString
+example:
+  name: Example User
+  email: example@example.com
+  password_digest: foobar 
+  password_reset: foobar
 
-two:
-  name: MyString
-  email: MyString
-  password_digest: MyString
-  password_reset: MyString
+another:
+  name: Another User
+  email: another@example.com
+  password_digest: foobar
+  password_reset: foobar

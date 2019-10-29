@@ -1,11 +1,9 @@
-<% if flash.any? %>
-    <section id="flash-messages" class="section">
-        <div class="container">
-            <ul>
-                <% flash.each do |type, message| %>
-                    <li><%= message %></li>
-                <% end %>
-            </ul>
-        </div>
-    </section>
-<% end %>
+<div id="flash-messages" class="container center">
+    <ul>
+        <% flash.each do |type, message| %>
+            <span class="tag is-large is-<%= type %>">
+                <li><%= message %></li>
+            </span>
+        <% end %>
+    </ul>
+</div>

@@ -3,6 +3,13 @@
 
 <section class="section">
     <div class="container">
-        <%= link_to("Sign in", login_path) %>
+        <div class="has-text-right">
+            <% if logged_in? %>
+                <h5 class="is-size-5 paragraph">Welcome, <%= current_user.name %></h5>
+                <%= link_to("Log Out", logout_path, method: :delete, class: "button is-link") %>
+            <% else %>
+                <%= link_to("Log in", login_path, class: "button is-link") %>
+            <% end %> 
+        </div>
     </div>
 </section>
