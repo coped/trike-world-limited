@@ -6,6 +6,9 @@ class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
 
+  # Add test fixtures
+  fixtures :all
+
   # Add more helper methods to be used by all tests here...
   include ApplicationHelper
 end

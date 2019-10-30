@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: login_params[:email].downcase)
     if @user && @user.authenticate(login_params[:password])
       log_in(@user)
+      login_params[:remember] == "1" ? remember(@user) : forget(@user)
       redirect_to(posts_path)
     else
       flash.now[:warning] = "Incorrect email / password combination."
@@ -21,6 +22,6 @@ class SessionsController < ApplicationController
   private
 
     def login_params
-      params.require(:login).permit(:email, :password)
+      params.require(:login).permit(:email, :password, :remember)
     end
 end
