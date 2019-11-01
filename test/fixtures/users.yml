@@ -2,12 +2,14 @@
 
 example:
   name: Example User
-  email: example@example.com
-  password_digest: foobar 
-  password_reset: foobar
+  email: example@user.com
+  password_digest: foobar
+  reset_digest:
+  reset_sent_at:
 
 another:
   name: Another User
-  email: another@example.com
+  email: another@user.com
   password_digest: foobar
-  password_reset: foobar
+  reset_digest:
+  reset_sent_at:

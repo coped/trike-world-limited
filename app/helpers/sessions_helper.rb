@@ -4,7 +4,7 @@ module SessionsHelper
             @current_user ||= User.find_by(id: session[:user_id])
         elsif user_id = cookies.signed[:user_id]
             user = User.find_by(id: user_id)
-            if user && BCrypt::Password.new(user.remember_digest).is_password?(cookies[:remember_token])
+            if user && user.authenticates_with?(:remember_digest, cookies[:remember_token])
                 log_in(user)
                 @current_user = user
             end
