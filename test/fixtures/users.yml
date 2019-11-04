@@ -3,13 +3,15 @@
 example:
   name: Example User
   email: example@user.com
-  password_digest: foobar
+  password_digest: <%= User.digest('foobar') %>
   reset_digest:
   reset_sent_at:
+  remember_digest:
 
 another:
   name: Another User
   email: another@user.com
-  password_digest: foobar
+  password_digest: <%= User.digest('foobar') %>
   reset_digest:
   reset_sent_at:
+  remember_digest:

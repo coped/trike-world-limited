@@ -51,6 +51,12 @@ class User < ApplicationRecord
         UserMailer.password_reset(self).deliver_now!
     end
 
+    def forget_after_reset
+        update(reset_digest: nil, reset_sent_at: nil, remember_digest: nil)
+        self.reset_token = nil
+        self.remember_token = nil
+    end
+
     def first_name
         self.name.split.first.capitalize
     end

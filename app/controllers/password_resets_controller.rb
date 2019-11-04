@@ -9,8 +9,7 @@ class PasswordResetsController < ApplicationController
   def create
     @user = User.find_by(email: params[:email])
     if @user
-      @user.create_reset_digest
-      @user.send_reset_email
+      reset(@user)
       flash[:info] = "Email sent with password reset instructions."
       redirect_to login_path
     else
@@ -27,7 +26,7 @@ class PasswordResetsController < ApplicationController
       @user.errors.add(:password, "can't be empty")
       render 'edit'
     elsif @user.update(reset_params)
-      @user.update_attribute(:reset_digest, nil)
+      @user.forget_after_reset
       flash[:info] = "Password successfully updated."
       redirect_to login_path
     else
@@ -48,7 +47,7 @@ class PasswordResetsController < ApplicationController
     def valid_user
       if !(@user && @user.authenticates_with?(:reset_digest, params[:id]))
         flash[:warning] = "Something went wrong. Please try again."
-        redirect_to new_password_reset_path
+        redirect_to login_path
       end
     end
 
