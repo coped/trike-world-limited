@@ -1,19 +1,15 @@
 <% provide(:title, "Blog Name") %>
 <% provide(:page, "blog") %>
 
-<section class="section">
-    <div class="container">
-        <div class="has-text-right">
-            <% if logged_in? %>
-                <h5 class="is-size-5 paragraph">
-                Welcome, <%= current_user.first_name %> 
-                <%= link_to("Log Out", logout_path, method: :delete, class: "button is-link") %></h5>
-            <% else %>
-                <%= link_to("Log in", login_path, class: "button is-link") %>
-            <% end %> 
-        </div>
+<div class="container">
+    <div class="has-text-right">
+        <% if logged_in? %>
+            <%= render 'posts_navbar' %>
+        <% else %>
+            <%= link_to("Log in", login_path, class: "button is-link") %>
+        <% end %> 
     </div>
-</section>
+</div>
 
 <section class="section">
     <div class="container has-text-centered">

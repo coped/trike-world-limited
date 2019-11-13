@@ -1,13 +1,18 @@
 <% provide(:title, "Log in") %>
 <% provide(:page, "login") %>
 
+
 <section class="section">
-    <div class=container>
-        <h1 class="subtitle is-size-1 has-text-centered">Log in</h1>
-    </div>
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><%= link_to("Blog Name", posts_path) %></li>
+            <li class="is-active"><a href="#" aria-current="page">Log In</a></li>
+        </ul>
+    </nav>
     <div class="container columns center">
         <div class="column is-8">
-            <% # local: true allows render to work%>
+        <h1 class="subtitle is-size-1 has-text-centered">Log In</h1>
+            <% #  local: true allows render to work %>
             <%= form_with(scope: :login, url: login_path, local: true) do |f| %>
                 <div class="field">
                     <%= f.label :email, class: "label" %>
