@@ -1,9 +1,11 @@
 User.create!(name:  "Example User",
+             road_name: "Shadow Rider",
              email: "example@user.com",
              password:              "foobar",
              password_confirmation: "foobar")
 
 User.create!(name:  "Another User",
+             road_name: "Big Daddy",
              email: "another@user.com",
              password:              "foobar",
              password_confirmation: "foobar")
@@ -14,7 +16,8 @@ Post.create!(title: "Example Title",
 
 Post.create!(title: "Another Title",
              body:  "Oh, man. Another post!",
-             user_id: 1)
+             user_id: 1,
+             updated_at: Time.now + 1_000_000)
              
 Post.create!(title: "Yet Another Title",
              body:  "Something creative",
