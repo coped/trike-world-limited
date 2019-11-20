@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails',             '~> 6.0.0'
 gem 'puma',              '~> 3.11'
 gem 'sass-rails',        '~> 6.0'
@@ -13,12 +14,12 @@ gem 'bootsnap',          '>= 1.4.2', require: false
 gem 'bulma-rails',       '~> 0.7.5'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.2'
 gem 'bcrypt',            '~> 3.1', '>= 3.1.13'
+gem 'pg', '~> 1.1', '>= 1.1.4'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.4', '>= 1.4.1'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -37,7 +38,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 1.1', '>= 1.1.4'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

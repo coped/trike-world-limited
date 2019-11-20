@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
+
+  def setup 
+  end
+
   test "should get index" do
     get posts_path
     assert_response :success
