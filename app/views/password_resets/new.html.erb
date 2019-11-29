@@ -1,32 +1,29 @@
 <% provide(:title, "Forgot Password") %>
 <% provide(:page, "forgot_password") %>
 
-
-<section class="section">
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><%= link_to("Blog Name", posts_path) %></li>
-            <li><%= link_to("Log In", login_path) %></li>
-            <li class="is-active"><a href="#" aria-current="page">Reset Password</a></li>
-        </ul>
-    </nav>
-    <div class="container columns center">
-        <div class="column is-8">
-            <h1 class="subtitle is-size-1 has-text-centered">Reset Password</h1>
-            <%= form_with(url: password_resets_path, local: true) do |f| %>
-                <div class="field">
-                    <%= f.label :email, class: "label" %>
-                    <div class="control">
-                        <%= f.email_field :email, class: "input" %>
-                    </div>
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li><%= link_to("Not For Sissies!", posts_path) %></li>
+        <li><%= link_to("Log In", login_path) %></li>
+        <li class="is-active"><a href="#" aria-current="page">Reset Password</a></li>
+    </ul>
+</nav>
+<div class="container columns center">
+    <div class="column is-8">
+        <h1 class="subtitle is-size-1 has-text-centered">Reset Password</h1>
+        <%= form_with(url: password_resets_path, local: true) do |f| %>
+            <div class="field">
+                <%= f.label :email, class: "label" %>
+                <div class="control">
+                    <%= f.email_field :email, class: "input" %>
                 </div>
+            </div>
 
-                <div class="field">
-                    <div class="control">
-                        <%= f.submit :submit, class: "button is-link" %>
-                    </div>
+            <div class="field">
+                <div class="control">
+                    <%= f.submit :submit, class: "button is-link" %>
                 </div>
-            <% end %>
-        </div>
+            </div>
+        <% end %>
     </div>
-</section>
+</div>

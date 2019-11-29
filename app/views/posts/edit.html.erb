@@ -1,2 +1,31 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<%= render 'posts_navbar' %>
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li><%= link_to("Not For Sissies!", posts_path) %></li>
+        <li class="is-active"><a href="#" aria-current="page">Edit Post</a></li>
+    </ul>
+</nav>
+<div class="container column is-8">
+    <h1 class="is-size-1 subtitle has-text-centered">Edit Post</h1>
+    <%= form_with(model: @post, local: true) do |f| %>
+        <div class="field">
+            <%= f.label :title, class: "label" %>
+            <div class="control">
+                <%= f.text_field :title, class: "input", placeholder: "Your title", required: true %>
+            </div>
+        </div>
+
+        <div class="field">
+            <%= f.label :body, class: "label"%>
+            <div class="control">
+                <%= f.text_area :body, class: "textarea", rows: "7", placeholder: "Your post content", required: true %>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <%= f.submit :submit, class: "button is-link" %>
+            </div>
+        </div>
+    <% end %>
+</div>

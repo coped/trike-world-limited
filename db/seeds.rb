@@ -17,8 +17,10 @@ Post.create!(title: "Example Title",
 Post.create!(title: "Another Title",
              body:  "Oh, man. Another post!",
              user_id: 1,
-             updated_at: Time.now + 1_000_000)
+             created_at: Time.now - 1_000_000,
+             updated_at: Time.now - 500_000)
              
 Post.create!(title: "Yet Another Title",
              body:  "Something creative",
-             user_id: 2)
+             user_id: 2,
+             created_at: Time.now - 2_000_000)
