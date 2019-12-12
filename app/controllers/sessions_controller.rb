@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :redirect_if_logged_in, only: [:new, :create]
+
   def new
   end
 
@@ -23,5 +25,9 @@ class SessionsController < ApplicationController
 
     def login_params
       params.require(:login).permit(:email, :password, :remember)
+    end
+
+    def redirect_if_logged_in
+      redirect_to posts_path if current_user
     end
 end

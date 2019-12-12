@@ -15,7 +15,7 @@ class User < ApplicationRecord
                          length: { minimum: 6 },
                          allow_nil: true 
 
-    has_many :posts
+    has_many :posts, dependent: :destroy
 
     def User.new_token
         SecureRandom.urlsafe_base64

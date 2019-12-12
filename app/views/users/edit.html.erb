@@ -1,2 +1,45 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<%= render 'posts/posts_navbar' %>
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+        <li><%= link_to("Not For Sissies!", posts_path) %></li>
+        <li class="is-active"><a href="#" aria-current="page">Account Settings</a></li>
+    </ul>
+</nav>
+<div class="container has-text-centered">
+    <h1 class="subtitle is-size-1">Account Settings</h1>
+</div>
+<div class="container columms center">
+    <div class="column is-8">
+        <%= form_with(model: @user, local: true) do |f| %>
+            <div class="field">
+                <%= f.label :name, class: "label" %>
+                <div class="control">
+                    <%= f.text_field :name, class: "input" %>
+                </div>
+            </div>
+
+            <div class="field">
+                <%= f.label :road_name, class: "label" %>
+                <div class="control">
+                    <%= f.text_field :road_name, class: "input" %>
+                </div>
+            </div>
+
+            <div class="field">
+                <%= f.label :password, class: "label" %>
+                <div class="control">
+                    <%= f.password_field :password, class: "input" %>
+                </div>
+            </div>
+
+            <div class="field">
+                <%= f.label :password_confirmation, class: "label" %>
+                <div class="control">
+                    <%= f.password_field :password_confirmation, class:"input" %>
+                </div>
+            </div>
+
+            <%= f.submit :submit, class: "button is-link" %>
+        <% end %>
+    </div>
+</div>

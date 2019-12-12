@@ -1,35 +1,39 @@
 class UsersController < ApplicationController
-  before_action :get_user, only: [:show, :edit, :update]
-  before_action :is_current_user?, only: [:edit, :edit_password]
+  before_action :is_logged_in?,    only: [:edit, :edit_password, :update]
+  before_action :is_current_user?, only: [:edit, :edit_password, :update]
 
   def show
     redirect_to about_path
   end
 
   def edit
-    @user
   end
 
   def edit_password
+    # render template: 'users/edit_password'
   end
 
   def update
-    # Update user attributes
+    if @user.update(user_params)
+      flash[:info] = "User settings updated"
+      redirect_to edit_user_path(@user)
+    else
+      render 'users/edit'
+    end
   end
 
   private
-    def get_user
-      @user = User.find_by(id: params[:id])
-    end
 
     def user_params
-      params.require(:user).permit(:name, :road_name)
+      params.require(:user).permit(:name, :road_name, :password, :password_confirmation)
     end
 
     def is_current_user?
-      if current_user != @user
-        flash[:warning] = "You don't have permission to view that page."
-        redirect_to posts_path
-      end
+      @user = User.find_by(id: params[:id])
+      redirect_to posts_path if current_user != @user
+    end
+
+    def is_logged_in?
+      redirect_to posts_path if !current_user
     end
 end

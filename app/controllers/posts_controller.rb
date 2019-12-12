@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
-  before_action :get_post, only: [:edit, :update, :destroy]
-  before_action :is_logged_in?, only: [:new, :create, :edit, :update, :destroy]
+  before_action :find_post,       only: [:edit, :update, :destroy]
+  before_action :is_logged_in?,   only: [:new, :create, :edit, :update, :destroy]
   before_action :is_post_author?, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.includes(:user).all.order(created_at: :desc)
+    @posts = Post.includes(:user).order(created_at: :desc).all
   end
 
   def show
@@ -58,7 +58,7 @@ class PostsController < ApplicationController
       redirect_to posts_path if !current_user
     end
 
-    def get_post
+    def find_post
       @post = Post.find_by(id: params[:id])
     end
 
