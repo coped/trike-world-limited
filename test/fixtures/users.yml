@@ -1,6 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 example:
+  id: 1
   name: Example User
   email: example@user.com
   password_digest: <%= User.digest('foobar') %>
@@ -9,6 +10,7 @@ example:
   remember_digest:
 
 another:
+  id: 2
   name: Another User
   email: another@user.com
   password_digest: <%= User.digest('foobar') %>

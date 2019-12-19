@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  before_action :find_post,       only: [:edit, :update, :destroy]
   before_action :is_logged_in?,   only: [:new, :create, :edit, :update, :destroy]
   before_action :is_post_author?, only: [:edit, :update, :destroy]
 
@@ -29,10 +28,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post
+    @post = Post.find_by(id: params[:id])
   end
 
   def update
+    @post = Post.find_by(id: params[:id])
     if @post.update(post_params)
       flash[:info] = "Post successfully updated"
       redirect_to posts_path
@@ -43,6 +43,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find_by(id: params[:id])
     @post.destroy
     flash[:info] = "'#{@post.title}' was deleted."
     redirect_to posts_path
@@ -56,10 +57,6 @@ class PostsController < ApplicationController
 
     def is_logged_in?
       redirect_to posts_path if !current_user
-    end
-
-    def find_post
-      @post = Post.find_by(id: params[:id])
     end
 
     def is_post_author?
