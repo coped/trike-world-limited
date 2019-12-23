@@ -28,11 +28,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by(id: params[:id])
   end
 
   def update
-    @post = Post.find_by(id: params[:id])
     if @post.update(post_params)
       flash[:info] = "Post successfully updated"
       redirect_to posts_path
@@ -43,7 +41,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find_by(id: params[:id])
     @post.destroy
     flash[:info] = "'#{@post.title}' was deleted."
     redirect_to posts_path
@@ -60,6 +57,7 @@ class PostsController < ApplicationController
     end
 
     def is_post_author?
+      @post = Post.find_by(id: params[:id])
       redirect_to posts_path if current_user != @post.user
     end
 end
