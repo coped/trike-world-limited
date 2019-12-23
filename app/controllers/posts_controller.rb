@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :is_post_author?, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.includes(:user).order(created_at: :desc).all
+    @posts = Post.index_by_most_recent
   end
 
   def show
