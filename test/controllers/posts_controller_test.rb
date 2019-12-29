@@ -50,6 +50,12 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to posts_path
   end
 
+  test "should get edit if logged in" do
+    log_in_as(@user)
+    get edit_post_path(@post)
+    assert_response :success
+  end
+
   test "should redirect from update if not logged in" do
     assert_no_changes -> { @post } do
       patch post_path(@post), params: { post: { title: "A different title" } }
