@@ -32,8 +32,4 @@ class UsersController < ApplicationController
       @user = User.find_by(id: params[:id])
       redirect_to posts_path if current_user != @user
     end
-
-    def is_logged_in?
-      redirect_to posts_path if !current_user
-    end
 end

@@ -11,12 +11,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.user_id = current_user.id
+    @post = current_user.posts.build(post_params)
     if @post.valid?
       @post.save
       flash[:info] = "Post successfully created."
@@ -49,11 +48,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :body, :user_id)
-    end
-
-    def is_logged_in?
-      redirect_to posts_path if !current_user
+      params.require(:post).permit(:title, :body)
     end
 
     def is_post_author?
