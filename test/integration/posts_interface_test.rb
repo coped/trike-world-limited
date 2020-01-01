@@ -47,7 +47,7 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
       another_user_post.reload
     end
     # Deleting post
-    assert_difference -> { Post.count}, -1 do
+    assert_difference -> { Post.count }, -1 do
       delete post_path(post)
     end
     # Deleting someone else's post
