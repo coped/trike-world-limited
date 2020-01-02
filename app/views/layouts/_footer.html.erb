@@ -1,16 +1,16 @@
 <footer id="footer" class="footer">
     <div class="content">
-        <div class="container">
+        <div class="container has-text-centered">
+            <%= image_tag("misc/trikeworldltd-logo.png", class: "footer-logo has-text-centered") %>
+            <hr class="footer-hr">
             <div class="columns">
-                <div class="column center">
-                    <%= link_to(
-                            image_tag("/assets/misc/made-with-bulma-scaled.png", { alt: "Made with Bulma", size: "192x36" }),
-                        "https://bulma.io", { class: "center" }) %>
+                <div class="column has-text-centered">
+                    <%= link_to("Trike World Limited on Blogger", "https://trikeworldlimited.blogspot.com/", class: "button is-large") %>
                 </div>
                 <div class="column has-text-centered">
-                    <p>
-                        Made by <%= link_to("Dennis Cope", "https://coped.dev") %>.
-                    </p>
+                        <%= link_to(
+                                image_tag("misc/FindUs-FB-RGB.svg", class: "facebook-footer-logo button is-large"),
+                            "https://www.facebook.com/v8trikechoppers") %>
                 </div>
             </div>
         </div>

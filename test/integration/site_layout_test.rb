@@ -16,6 +16,5 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", galleries_roth_body_path, count: 2
     assert_select "a[href=?]", galleries_twin_turbo_path, count: 2
     assert_select "a[href=?]", galleries_misc_path, count: 2
-    assert_select "a[href=?]", "https://coped.dev", count: 1
   end
 end
