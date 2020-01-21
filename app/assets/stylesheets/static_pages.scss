@@ -9,17 +9,17 @@
 }
 
 .has-home-bg-img { 
-    background: url('home_images/20161210_144905-1920x670-comp.jpg') center 42%;
+    background: url('https://trikeworldlimited.s3-us-west-1.amazonaws.com/home_images/20161210_144905-1920x670-comp.jpg') center 42%;
     background-size: cover;
 }
 
 .has-about-bg-img { 
-    background: url('about_images/20170715_102550-1920x670-comp.jpg') center 12%;
+    background: url('https://trikeworldlimited.s3-us-west-1.amazonaws.com/about_images/20170715_102550-1920x670-comp.jpg') center 12%;
     background-size: cover;
 }
 
 .has-contact-bg-img {
-    background: url('contact_images/20180414_131039-1920x670-comp.jpg') center 28%;
+    background: url('https://trikeworldlimited.s3-us-west-1.amazonaws.com/contact_images/20180414_131039-1920x670-comp.jpg') center 28%;
     background-size: cover;   
 }
 
@@ -33,8 +33,4 @@
 
 .facebook-footer-logo {
     width: 20rem;
-}
-
-.footer-hr {
-    background-color: lightgrey;
 }

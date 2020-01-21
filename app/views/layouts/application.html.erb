@@ -9,8 +9,9 @@
     <title><%= full_title(yield(:title)) %></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= favicon_link_tag(asset_path("misc/favicon.ico")) %>
+    <%= favicon_link_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/misc/favicon.ico") %>
 
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet"> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
