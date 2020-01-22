@@ -5,10 +5,13 @@
         <li class="is-active"><a href="#" aria-current="page">Account Settings</a></li>
     </ul>
 </nav>
-<div class="container has-text-centered">
-    <h1 class="subtitle is-size-1">Account Settings</h1>
-</div>
-<div class="container columms center">
+<h1 class="subtitle is-size-1 has-text-centered">Account Settings</h1>
+<div class="container columms <%= @user.avatar.attached? ? nil : "center"%> level">
+    <% if @user.avatar.attached? %>
+        <div class="column is-4 has-text-centered level-left">
+            <%= image_tag(@user.avatar.variant(resize_to_limit: [500, 500])) %>
+        </div>
+    <% end %>
     <div class="column is-8">
         <%= form_with(model: @user, local: true) do |f| %>
             <div class="field">
@@ -36,6 +39,13 @@
                 <%= f.label :password_confirmation, class: "label" %>
                 <div class="control">
                     <%= f.password_field :password_confirmation, class:"input" %>
+                </div>
+            </div>
+
+            <div class="field">
+                <%= f.label :profile_picture, class: "label" %>
+                <div class="control">
+                    <%= f.file_field :avatar %>
                 </div>
             </div>
 

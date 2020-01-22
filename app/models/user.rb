@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     attr_accessor :remember_token, :reset_token
+    has_one_attached :avatar
 
     before_save :downcase_email
 

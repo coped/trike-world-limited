@@ -32,3 +32,6 @@ yarn-debug.log*
 
 # Ignore features.todo list
 trike-features.todo
+
+# Ignore locally uploaded images
+/storage

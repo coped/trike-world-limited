@@ -44,4 +44,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   Rails.application.routes.default_url_options[:host] = "localhost:3000"
+
+  # Store uploaded files on the local file system in a temporary directory.
+  config.active_storage.service = :test
 end

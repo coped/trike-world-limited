@@ -18,6 +18,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     if @post.valid?
       @post.save
+      @post.image.attach(post_params[:image])
       flash[:info] = "Post successfully created."
       redirect_to posts_path
     else
@@ -40,6 +41,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post.image.purge
     @post.destroy
     flash[:info] = "'#{@post.title}' was deleted."
     redirect_to posts_path
@@ -48,7 +50,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :image)
     end
 
     def is_post_author?

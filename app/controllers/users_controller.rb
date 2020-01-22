@@ -9,12 +9,9 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def edit_password
-    # render template: 'users/edit_password'
-  end
-
   def update
     if @user.update(user_params)
+      @user.avatar.attach(user_params[:avatar])
       flash[:info] = "User settings updated"
       redirect_to edit_user_path(@user)
     else
@@ -25,7 +22,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :road_name, :password, :password_confirmation)
+      params.require(:user).permit(:name, :road_name, :password, :password_confirmation, :avatar)
     end
 
     def is_current_user?
