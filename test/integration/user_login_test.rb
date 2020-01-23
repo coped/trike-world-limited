@@ -12,6 +12,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     assert_template 'sessions/new'
     post login_path, params: { login: { email: "",
                                         password: "" }}
+    assert_not session[:user_id]
     assert_not flash.empty?
     get posts_path
     assert_template 'posts/index'
@@ -26,6 +27,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     assert_template 'sessions/new'
     post login_path, params: { login: { email: @user.email,
                                         password: "foobar" }}
+    assert_equal session[:user_id], @user.id
     assert_redirected_to posts_path
     follow_redirect!
     assert_template 'posts/index'
@@ -42,6 +44,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     post login_path, params: { login: { email: @user.email,
                                        password: "foobar",
                                        remember: "0" }}
+    assert_equal session[:user_id], @user.id
     assert_nil assigns(:user).remember_token
     assert_nil cookies[:remember_token]
   end
@@ -50,6 +53,7 @@ class UserLoginTest < ActionDispatch::IntegrationTest
     post login_path, params: { login: { email: @user.email,
                                         password: "foobar",
                                         remember: "1" }}
+    assert_equal session[:user_id], @user.id
     assert_equal cookies[:remember_token], assigns(:user).remember_token
   end
 end
