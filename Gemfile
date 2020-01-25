@@ -17,6 +17,7 @@ gem 'bcrypt',            '~> 3.1', '>= 3.1.13'
 gem 'pg',                '~> 1.1', '>= 1.1.4'
 gem "aws-sdk-s3",        require: false
 gem 'image_processing',  '~> 1.2'
+gem 'will_paginate',     '~> 3.2', '>= 3.2.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

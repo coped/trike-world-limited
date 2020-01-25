@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :is_post_author?, only: [:edit, :update, :destroy]
 
   def index
-    @posts = Post.index_by_most_recent
+    @posts = Post.index_by_most_recent.paginate(page: params[:page], per_page: 5)
   end
 
   def show
