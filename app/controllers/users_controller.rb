@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   def update
     if @user.update(user_params)
       @user.avatar.attach(user_params[:avatar]) if user_params[:avatar]
-      flash[:info] = "User settings updated"
+      flash[:info] = "Account settings updated"
       redirect_to edit_user_path(@user)
     else
       render 'users/edit'

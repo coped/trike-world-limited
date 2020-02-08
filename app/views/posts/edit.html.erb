@@ -40,5 +40,9 @@
                 </div>
             </div>
         <% end %>
+        <div class="has-text-right">
+        <%= link_to("Delete post", post_path(@post), method: :delete, class: "button is-danger", data: 
+                                                                                                 { confirm: "Are you sure you want to delete this post?"}) %>
+        </div>
     </div>
 </div>
