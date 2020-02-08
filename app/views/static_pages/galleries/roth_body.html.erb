@@ -2,13 +2,33 @@
 
 <section class="section">
     <div class="container has-text-centered">
-        <h1 class="subtitle is-size-2">Roth body gallery coming soon.</h1>
+        <h1 class="subtitle is-size-2">Roth body</h1>
     </div>
 </section>
 
 <section class="section">
-    <div class="container center">
-        <%= image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190421_171638363_scaled.jpg",
-            style: "max-width: 1100px", alt: "Side view of Roth body") %>
+    <div class="container">
+        <div class="columns center">
+            <%= 
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190421_171638363_scaled.jpg",
+                    class: "column", alt: "Side view of Roth body"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190421_171638363_scaled.jpg")
+            %>
+        </div>
+        <div class="columns">
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190421_171632861-1000x750.jpg",
+                    class: "column", alt: "roth body"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190421_171632861-1000x750.jpg")
+            %>
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190624_125405883-1000x750.jpg",
+                    class: "column", alt: "roth body"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/roth_body/IMG_20190624_125405883-1000x750.jpg")
+            %>
+        </div>
     </div>
 </section>

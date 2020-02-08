@@ -2,13 +2,39 @@
 
 <section class="section">
     <div class="container has-text-centered">
-        <h1 class="subtitle is-size-2">Miscellaneous gallery coming soon.</h1>
+        <h1 class="subtitle is-size-2">Miscellaneous</h1>
     </div>
 </section>
 
 <section class="section">
-    <div class="container center">
-        <%= image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/20180724_184420_scaled_4%3A3.jpg",
-            style: "max-width: 1100px", alt: "Welding a rolling chassis") %>
+    <div class="container">
+        <div class="columns center">
+            <%= 
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/20180724_184420_scaled_4%3A3.jpg",
+                    class: "column", alt: "Welding a rolling chassis"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/20180724_184420_scaled_4:3.jpg")
+            %>
+        </div>
+        <div class="columns">
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/IMG_20190624_125331458-1000x750.jpg",
+                    class: "column", alt: "workshop"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/IMG_20190624_125331458-1000x750.jpg")
+            %>
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/IMG_20190624_125433966-1000x750.jpg",
+                    class: "column", alt: "hot rod body"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/IMG_20190624_125433966-1000x750.jpg")
+            %>
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/IMG_20190704_155011968-1000x750.jpg",
+                    class: "column", alt: "orange trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/misc/IMG_20190704_155011968-1000x750.jpg")
+            %>
+        </div>
     </div>
 </section>

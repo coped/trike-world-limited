@@ -2,13 +2,53 @@
 
 <section class="section">
     <div class="container has-text-centered">
-        <h1 class="subtitle is-size-2">Red trike gallery coming soon.</h1>
+        <h1 class="subtitle is-size-2">Red trike</h1>
     </div>
 </section>
 
 <section class="section">
-    <div class="container center">
-        <%= image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/20180515_094812_scaled.jpg",
-            style: "max-width: 1100px", alt: "Red trike") %>
+    <div class="container">
+        <div class="columns">
+            <%= 
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_145539039-1000x750.jpg",
+                    class: "column", alt: "red trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_145539039-1000x750.jpg")
+            %>
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_151423045-1000x750.jpg",
+                    class: "column", alt: "Dennis and the red trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_151423045-1000x750.jpg")
+            %>
+        </div>
+        <div class="columns center">
+            <%= 
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/20180515_094812_scaled.jpg",
+                    class: "column", alt: "Red trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/20180515_094812_scaled.jpg")
+            %>
+        </div>
+        <div class="columns">
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_151412420-1000x750.jpg",
+                    class: "column", alt: "Dennis and the red trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_151412420-1000x750.jpg")
+            %>
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_145549454-1000x750.jpg",
+                    class: "column", alt: "red trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190414_145549454-1000x750.jpg")
+            %>
+            <%=
+                link_to(
+                    image_tag("https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190421_171439870-1000x750.jpg",
+                    class: "column", alt: "red trike"),
+                "https://trikeworldlimited.s3-us-west-1.amazonaws.com/galleries/red_trike/IMG_20190421_171439870-1000x750.jpg")
+            %>
+        </div>
     </div>
 </section>
