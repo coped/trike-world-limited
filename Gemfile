@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'rails',             '~> 6.0.0'
-gem 'puma',              '~> 3.12'
+gem "puma",              '>= 3.12.3'
 gem 'sass-rails',        '~> 6.0'
 gem 'webpacker',         '~> 4.0'
 gem 'turbolinks',        '~> 5'
@@ -18,6 +18,7 @@ gem 'pg',                '~> 1.1', '>= 1.1.4'
 gem "aws-sdk-s3",        require: false
 gem 'image_processing',  '~> 1.2'
 gem 'will_paginate',     '~> 3.2', '>= 3.2.1'
+gem "nokogiri",          '>= 1.10.8'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
